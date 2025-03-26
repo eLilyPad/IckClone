@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Stages" load_steps=3 format=3 uid="uid://dlrl1rchextfb"]
+
+[ext_resource type="PackedScene" uid="uid://wuw0p55wv4kx" path="res://CustomStage.tscn" id="1_dun8k"]
+[ext_resource type="Script" uid="uid://cedcl1kbsl0r2" path="res://Scripts/Stages.cs" id="1_efbaw"]
+
+[resource]
+script = ExtResource("1_efbaw")
+Selected = 1
+CustomScene = ExtResource("1_dun8k")

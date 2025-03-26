@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://wuw0p55wv4kx"]
+
+[ext_resource type="Script" uid="uid://b62da23cagrtf" path="res://Scripts/CustomStage3D.cs" id="1_r7xob"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_u44n3"]
+size = Vector2(200, 200)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sb48q"]
+size = Vector3(200, 0.1, 200)
+
+[node name="Level" type="Node3D" node_paths=PackedStringArray("PlayerSpawnTransform", "ShipSpawnTransform")]
+script = ExtResource("1_r7xob")
+PlayerSpawnTransform = NodePath("PlayerSpawn")
+ShipSpawnTransform = NodePath("ShipSpawn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_u44n3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_sb48q")
+debug_fill = false
+
+[node name="PlayerSpawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.746, 1, 32.316)
+
+[node name="ShipSpawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2211, -7.62939e-06, -16.3573)

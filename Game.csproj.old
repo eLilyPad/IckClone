@@ -1,0 +1,34 @@
+<Project Sdk="Godot.NET.Sdk/4.3.0">
+  <PropertyGroup>
+  <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <ImplicitUsings>true</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Game</RootNamespace>
+    <configuration>
+      <appSettings>
+        <!-- Supported values: nunit, xunit2, mstestv2, nspec3 and mspec -->
+        <add key="FluentAssertions.TestFramework" value="xunit2" />
+      </appSettings>
+    </configuration>
+  </PropertyGroup>
+   <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="xunit" Version="2.7.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.7">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="SecurityCodeScan.VS2019" Version="5.0.0" PrivateAssets="all" />
+    <PackageReference Include="ClrHeapAllocationAnalyzer" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="System" Static="False" />
+    <Using Include="System.Collections" Static="False" />
+    <Using Include="System.Collections.Generic" Static="False" />
+    <Using Include="System.Linq" Static="False" />
+  </ItemGroup>
+</Project>
