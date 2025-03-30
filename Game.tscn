@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cx1tc56xahpxg"]
+[gd_scene load_steps=3 format=3 uid="uid://cx1tc56xahpxg"]
 
-[ext_resource type="Script" path="res://Core.cs" id="1_tl6uc"]
+[ext_resource type="Script" uid="uid://c7ihwa4153clg" path="res://Scripts/Core.cs" id="1_tl6uc"]
+[ext_resource type="Resource" uid="uid://dlrl1rchextfb" path="res://Stages.tres" id="2_xkndl"]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" node_paths=PackedStringArray("IcksFollowing")]
 script = ExtResource("1_tl6uc")
+Stages = ExtResource("2_xkndl")
+IcksFollowing = []
